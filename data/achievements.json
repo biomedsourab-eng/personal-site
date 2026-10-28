@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "title": "Sample journal article title goes here",
+      "year": "2026",
+      "category": "Publication",
+      "details": "Journal name, volume(issue), pages. Co-authors listed here.",
+      "link": "https://doi.org/"
+    },
+    {
+      "title": "Best Poster Award, Sample Conference",
+      "year": "2025",
+      "category": "Award",
+      "details": "Awarded for work presented at the national symposium.",
+      "link": ""
+    },
+    {
+      "title": "Invited talk on a topic you care about",
+      "year": "2025",
+      "category": "Talk",
+      "details": "Institution or event name, city.",
+      "link": ""
+    },
+    {
+      "title": "Teaching Assistant, Sample Lab Course",
+      "year": "2024",
+      "category": "Teaching",
+      "details": "Ran weekly practical sessions for undergraduate students.",
+      "link": ""
+    }
+  ]
+}

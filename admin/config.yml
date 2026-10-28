@@ -1,0 +1,53 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images land in the repo, and how the site refers to them
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Edits commit straight to main. Set to true if you want a draft/review step.
+publish_mode: simple
+
+collections:
+  - name: "content"
+    label: "Site content"
+    files:
+
+      - name: "profile"
+        label: "Profile"
+        file: "data/profile.json"
+        format: "json"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "About", name: "about", widget: "text" }
+          - { label: "Footer note", name: "footer", widget: "string", required: false }
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+
+      - name: "achievements"
+        label: "Achievements"
+        file: "data/achievements.json"
+        format: "json"
+        fields:
+          - label: "Achievements"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.year}} — {{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Publication", "Award", "Talk", "Teaching", "Other"]
+              - { label: "Details", name: "details", widget: "text", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }

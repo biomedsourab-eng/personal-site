@@ -1,0 +1,12 @@
+{
+  "name": "Your Name",
+  "role": "Researcher",
+  "tagline": "One line about what you work on and why it matters.",
+  "about": "Two or three sentences of background. Replace this from the admin panel — you never have to touch code to change it.",
+  "footer": "© 2026 Your Name",
+  "links": [
+    { "label": "Email", "url": "mailto:you@example.com" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/" }
+  ]
+}

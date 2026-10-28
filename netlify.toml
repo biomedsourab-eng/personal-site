@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+# Plain static site — nothing to compile.
+# Decap CMS writes JSON into the repo; Netlify redeploys on each commit.
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
